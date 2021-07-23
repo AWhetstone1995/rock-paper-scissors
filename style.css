@@ -1,21 +1,57 @@
+*::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: black;
+    background-color: rgb(75, 74, 74);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    min-width: 300px;
+    font-weight: 400;
 }
 
 .container {
     width: 100%;
-    display: grid;
-    grid-template-rows: auto;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1200px;
 }
+/*
+.container .title{
+    display: flex;
+    justify-content: center;
+}
+
 
 .container .score {
     display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     flex-direction: row;
     text-align: center;
+    justify-content: center;
+}
+*/
+.title {
+    display: flex;
+    justify-content: center;
+}
+.score {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+.result-message {
+    display: flex;
+    justify-content: center;
+}
+
+.player-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
