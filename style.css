@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    min-width: 300px;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .score {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
