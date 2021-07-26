@@ -17,6 +17,24 @@ const player = document.getElementById("player-score");
 const computer = document.getElementById("computer-score");
 const resultText = document.getElementById("result-text");
 const buttons = document.querySelectorAll('input');
+const endGame = document.getElementById('result-message');
+
+function resetButton() {    
+    let reset = document.createElement("input");
+    reset.type = "button";
+    reset.id = "reset";
+    reset.value = "Play Again?";
+    reset.addEventListener('click', function() {
+        location.reload();
+    });
+    endGame.appendChild(reset);    
+}
+
+function disableButtons() {
+    buttons.forEach(Element => {
+        Element.disabled = true;
+    })
+}
 
 function computerPlay() {
     let rpsArray = ['Rock', 'Paper', 'Scissors'];
@@ -63,9 +81,13 @@ function playRound(playerSelection, computerSelection) {
     }
 
     if (playerScore === 5){
-        resultText.textContent = "Congratulations, you win!";
+        resultText.textContent = "By sheer luck, you won...";
+        disableButtons();
+        resetButton();
     } else if (computerScore === 5) {
         resultText.textContent = "Game over...";
+        disableButtons();
+        resetButton();
     }
 }
 

@@ -44,11 +44,17 @@ body {
     font-size: 16px;
     text-align: center;
 }
-.result-message {
+#result-message {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
+#result-message #reset {
+    height: 25px;
+
+}
 .player-input {
     display: flex;
     flex-wrap: wrap;
